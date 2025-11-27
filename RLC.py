@@ -4,7 +4,7 @@ import time, sys, shutil
 
 # ================= COOL TERMINAL ANIMATIONS =================
 
-def slow_print(text, delay=0.03):
+def slow_print(text, delay=0.02):
     for ch in text:
         sys.stdout.write(ch)
         sys.stdout.flush()
@@ -21,8 +21,7 @@ def animated_title(text):
         sys.stdout.flush()
         time.sleep(0.02)
     print("\n" + "=" * cols)
-    print("   RLC Circuit Analyzer for Frequency Domain Analysis   ")
-    print("=" * cols + "\n")
+
 
 # ================= USER INPUT =================
 
@@ -34,13 +33,14 @@ R = float(input("Resistance R (Ohms)       : "))
 L = float(input("Inductance L (Henrys)     : "))
 C = float(input("Capacitance C (Farads)    : "))
 
-f_start = float(input("Start Frequency (Hz)      : "))
-f_end   = float(input("End Frequency (Hz)        : "))
-points  = int(input("Number of Frequency Points: "))
+#Fixed frequency parameters
+f_start =10
+f_end=5000
+points=1000
 
-if points > 1500:
-    slow_print("⚠ Too many points! Limiting to 1000 for smooth performance.")
-    points = 1000
+slow_print("\n Start frequency : 10Hz")
+slow_print(" End frequency   : 5000Hz")
+slow_print(" Frequency Points: 1000")
 
 slow_print("\nProcessing your circuit... Please wait...\n", 0.03)
 
