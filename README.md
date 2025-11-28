@@ -10,8 +10,8 @@ Features:
 - Stability analysis
 
 Files Included:
-- RLC.py → Main Python code
-- RLC_REPORT.pdf → Project Report
+- RLC_Circuit_Analyser.py → Main Python code
+- RLC_REPORT_.pdf → Project Report
 - RLC_SLIDES.pdf → Presentation Slides
 
 Developed by:
